@@ -1,8 +1,8 @@
 :root{
 	--primary-bg-color: #ffffff;
 	--secondary-bg-color: #0a0a0a;
-    --accent-color: #cccbcb;
-    --highlight-color: #ff8132;
+	--accent-color: #cccbcb;
+	--highlight-color: #ff8132;
 }
 *{
 	margin: 0;
@@ -256,13 +256,14 @@ body{
 	}
 }
 /* mobile */
-@media (max-width: 600px) {
+@media (max-width: 720px) {
     #navbar {
         display: none;
     }
 	#welcome-section{
 		display: inline-block;
 		margin-top: 30px;
+		height: auto;
 	}
 	.welcome-img {
     width: 100vw;
@@ -316,14 +317,17 @@ body{
 }
 
 /* Tablet */
-@media (min-width: 601px) and (max-width: 1024px) {
+@media (min-width: 720px) and (max-width: 960px) {
     #navbar {
         display: none;
     }
-	#welcome-section{
-		display: inline-block;
-	}
-    .welcome-img {
+    #welcome-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+		height: auto;
+    }
+	.welcome-img {
     width: 100vw;
     margin: 0 auto;
 	position: relative;
@@ -347,6 +351,7 @@ body{
     .welcome-text {
         width: 90%;
         margin: 30px auto 0 auto;
+        text-align: center;
     }
     .welcome-text h1 {
         font-size: 2.5em;
@@ -358,12 +363,18 @@ body{
         font-size: 2.2em;
     }
     .project-wrap {
+        display: grid;
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 20px;
+        padding: 20px;
     }
-	.additional-contact{
-		font-size: x-small;
-		gap: 10px;
-	}
+    .additional-contact {
+        font-size: x-small;
+        gap: 10px;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
 }
 
 /* scrollbar */
